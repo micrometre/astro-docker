@@ -70,8 +70,8 @@ export default function Form() {
                     </div>
                     <div className="mt-3 text-center">
                       <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                        We'll get back to you in 1-2 business
-                        days.
+                        We'll get back to you in 1-3
+                        Hours.
                       </p>
                     </div>
                     {responseMessage && <p>{responseMessage}</p>}
