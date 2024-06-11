@@ -6,7 +6,7 @@ export default function Form() {
   async function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
-    const response = await fetch("http://172.167.169.27:8082", {
+    const response = await fetch("https://172.167.169.27:8082", {
       method: "POST",
       body: formData,
     });
