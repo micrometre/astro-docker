@@ -1,10 +1,11 @@
-import { type FormEvent, useState } from "react";
+import { useState } from "react";
 
-export default function Form() {
+export default function ContactForm() {
   const [responseMessage, setResponseMessage] = useState("");
 
-  async function submit(e: FormEvent<HTMLFormElement>) {
-    const formData = new FormData(e.target as HTMLFormElement);
+  async function submit(e) {
+    e.preventDefault();
+    const formData = new FormData(e.target);
     const response = await fetch("https://microanpr.xyz/", {
       method: "POST",
       body: formData,
