@@ -4,6 +4,7 @@ export default function Form() {
   const [responseMessage, setResponseMessage] = useState("");
 
   async function submit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
     const response = await fetch("https://microanpr.xyz/", {
       method: "POST",
